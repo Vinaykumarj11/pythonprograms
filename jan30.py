@@ -97,3 +97,92 @@ print(queue)
 queue.pop(0)
 print(queue)
 
+import random
+player=input("choose from choice:")
+com=random.randint(0,2)
+choice=['rock','paper','scissor']
+
+if player==rock and com==rock:
+  print("tie")
+elif player==paper and com==rock:
+    print("player wins")
+elif player==rock and com==scissor:
+    print("player wins")
+elif player==scissor and com==paper:
+  print("player wins")
+else:
+  print("computer wins")
+
+import random
+n=input("Enter your choice:")
+l=["Rock","Paper","Scissors"]
+s=random.choice(l)
+print("Computer choice",s)
+if n=="Rock" or n=="rock":
+    if s=="Scissors" or s=="scissors":
+        print("Player won")
+    elif s=="Rock" or s=="rock":
+        print("DRAW")
+    else:
+        print("Computer won")
+elif n=="Scissors" or n=="scissors":
+    if s=="Paper" or s=="paper":
+        print("Player won")
+    elif s=="Scissors" or s=="scissors":
+        print("DRAW")
+    else:
+        print("Computer won")
+elif n=="Paper" or n=="paper":
+    if s=="Rock" or s=="rock":
+        print("Player won")
+    elif s=="Paper" or s=="paper":
+        print("DRAW")
+    else:
+        print("Computer won")
+else:
+    print("INVALID INPUT")
+
+import random
+player=0
+computer=0
+for i in range(100):
+  n=input("Enter your choice:")
+  l=["Rock","Paper","Scissors"]
+  s=random.choice(l)
+  print("Computer choice",s)
+  if n=="Rock" or n=="rock":
+      if s=="Scissors" or s=="scissors":
+          print("Player won")
+          player+=1
+      elif s=="Rock" or s=="rock":
+          print("DRAW")
+      else:
+          print("Computer won")
+          computer+=1
+  elif n=="Scissors" or n=="scissors":
+      if s=="Paper" or s=="paper":
+          print("Player won")
+          player+=1
+      elif s=="Scissors" or s=="scissors":
+          print("DRAW")
+      else:
+          print("Computer won")
+          computer+=1
+  elif n=="Paper" or n=="paper":
+      if s=="Rock" or s=="rock":
+          print("Player won")
+          player+=1
+      elif s=="Paper" or s=="paper":
+          print("DRAW")
+      else:
+          print("Computer won")
+          computer+=1
+  else:
+      print("INVALID INPUT")
+  if(player==5):
+    print("player won")
+    break
+  elif(computer==5):
+    print("computer won")
+    break
+
